@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body >
+    
+    <header>
+        
+        <div class="container">            
+            <nav class="menuDesktop">
+                <ul class="menu">
+                    <li> <a class="menu__link" href="index.html">Home</a></li>
+                    <li> <a class="menu__link" href="about.html">Sobre mim</a></li>
+                    <li> <a class="menu__link" href="curriculo.html">Curriculo</a></li>
+                    <li> <a class="menu__link" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        
+
+            <nav class="menuMobile">
+                <ul class="menuMob">
+                    <li> <a class="menu__link" href="index.html">Home</a></li>
+                    <li> <a class="menu__link" href="about.html">Sobre mim</a></li>
+                    <li> <a class="menu__link" href="curriculo.html">Curriculo</a></li>
+                    <li> <a class="menu__link" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <ion-icon class="botao__menu" name="menu-outline"></ion-icon>
+        </div>
+    
+    </header>
+    <main>
+        <section class="form">
+            <form action="https://formsubmit.co/bibliotoc@hotmail.com" method="POST">
+                <h2> Entre em contato:</h2>
+                <label for="nome">Nome:</label>
+                <input type="text" name="name" id="nome" placeholder="Digite seu nome"
+                required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail"required>
+
+                <label for="textarea"> Mensagem: </label>
+                <textarea name="message" id="textarea" placeholder=" Sua mensagem..."cols="30" rows="10"></textarea>
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500//email-enviado.html">
+                <!--colocar em value a url qdo publicar o site -->
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logosenac">
+                <a href="https://www.senac.br/" target="_blank" rel="noopener noreferrer"> <img src="./assets/logos/senac2.png" alt="logo do Senac"></a>
+            </div>
+            
+            <div>
+                <p > Desenvolvido por Elania Bessa - 2023 </p>
+                <p  class="rodape__texto"> elania(◠‿◠)bessa</p>
+            </div>
+            <div class="logoalura">
+                <a href="https://www.alura.com.br/" target="_blank" rel="noopener noreferrer">  <img src="./assets/logos/alura.png" alt="logo da Alura"></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+    <script src="./styles/botaoMenu.js"> </script>
+
+</body>
+</html>

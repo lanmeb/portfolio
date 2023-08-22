@@ -1,0 +1,377 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+:root{
+  --cor-fundo: #072235;
+  --cor-fonte:#b2e6f2;
+  --cor-fundo-rodape: #6de0e4;
+  --cor-destaque:#2495a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+body{
+  box-sizing: border-box;/*garante que o filho não saia do pai*/
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+  font-family: 'Tektur', cursive;
+  font-size: 1.5rem;
+  height: 100vh;/*ocupa 100% da tela*/
+  
+  
+}
+
+.container{
+  background-color: var(--cor-fundo-rodape);
+  display: flex;
+  align-items: center;
+  
+  gap: 150px;/*afasta o logo do texto no rodape*/
+  padding: 2% 10%;
+  color: var(--cor-fundo);
+
+}
+
+/*HOME*/
+.menu{
+  /*display: inline;*/
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__link {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  color: var(--cor-fundo);
+  padding: 10px;
+}
+.menu__link:visited {
+  color: var(--cor-destaque);
+}
+.menu__link:hover {
+  color: yellow;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.menu__link:active {
+  color: green;
+}   
+
+.apresentacao{
+  /*essas 4 propriedades mantem alinhado a esq*/
+  display: flex;
+  align-items: center;
+  gap: 80px;/*afasta o logo do texto no rodape*/
+  padding: 2% 10%; 
+}
+
+.apresentacao__conteudo__titulo{
+  color: var(--cor-destaque);
+  padding: 2%;
+  text-align: center;
+}
+.apresentacao__conteudo__texto{
+  padding: 2% 1%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.apresentacao__links{
+  padding: 2% 1%;
+  text-align: center;
+}
+.destaque{
+  color: var(--cor-destaque);
+  display: inline;
+}
+
+ion-icon {
+  color: var(--cor-destaque);
+  font-size: 2.5rem;
+  padding: 5%;
+}
+
+ion-icon:hover{
+  color: yellow;
+  filter: blur(2px);
+  font-size: 3.43rem;
+}
+
+.fotoElania{
+  border-radius: 500px;
+  border: 4px solid var(--cor-fundo-rodape);
+  background-color: var(--cor-fonte);
+  padding: 2%;
+}
+
+.fotoElania:hover{
+  background-color: var(--cor-destaque);
+  opacity: 0.20 ;
+  filter: blur(2px);
+}
+.logosenac img{
+  width: 150px;
+  height: 86px;
+}
+
+/*easter egg*/
+.rodape__texto{
+  color: #6de0e4;
+}
+.rodape__texto:hover{
+  color: var(--cor-fundo);
+  text-align: center;
+  font-weight: 600;
+}
+/*SOBRE*/
+.hobbie{
+  padding: 1% 0% 1% 10%;
+}
+.hobbie-titulo{
+  padding: 1%;
+
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  padding: 1%;
+
+}
+  
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+}
+ 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+
+}
+  
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+  
+.flip-card-front {
+  background-color: var(--cor-fonte);
+  color: var(--cor-fundo);
+  text-align: center;
+
+}
+
+/*separar texto dentro do card*/
+.flip-texto{
+  padding: 5%;
+}
+  
+.flip-card-back {
+  background-color: var(--cor-fonte);
+  color: var(--cor-fundo);
+  transform: rotateY(180deg);
+
+}
+
+/*curriculo*/
+.profissional{
+  padding: 1% 0% 1% 10%;
+}
+.profissional__topicos{
+  padding: 1%;
+
+}
+
+.lista__cursos{
+  list-style: none;
+}
+
+[name="document-text-outline"] {
+  color: var(--cor-destaque);
+}
+.lista__cursos__icon{
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+summary{
+  padding: 1% 0% 1% 1%; 
+  list-style-type: '♣';
+  
+  color: var(--cor-destaque);
+  cursor: pointer;
+}
+summary:hover{
+  color: yellow;
+}
+.sumario{
+  padding: 1% 5%;
+ 
+}
+
+/*contato*/
+.form{
+  padding: 2% 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.form form{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form h2{
+  color: var(--cor-destaque);
+  font-size: 2rem;
+  margin-bottom: 2%;
+
+}
+.form label{
+  font-size: 1rem;
+  margin-bottom: 2%;
+
+  
+}
+.form input{
+  height: 40px;
+}
+
+.form input, .form textarea, .form button{
+  background-color: var(--cor-fonte);
+  border: 5px solid var(--cor-destaque);
+  border-radius: 10px;
+  padding: 1px;
+  margin-bottom: 24px; /*afasta texto email da caixa de cima*/
+}
+
+.form input:focus, .form textarea:focus{
+  outline: 2px solid var(--cor-destaque);
+  /*para a borda nao ficar preta*/
+}
+.form button{
+  /*enviar*/
+  height: 40px;
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border: none;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: yellow;
+}
+
+/*BOTAO HAMBURGUER*/
+.botao__menu{
+  display: none;
+}
+
+.invisible{
+  display: none; /*para deixar menu invisivel e so´aparecer ao clicar no icone menu*/
+}
+  
+/*email Enviado*/
+.send{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*JS*/
+#nome-autor::after{
+  content: "|";
+  animation: piscar 0.65s infinite;
+}
+
+@keyframes piscar{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+/*Responsividade */
+
+.menuMob{
+  display: none;
+}
+@media (max-width: 1440px){
+  .container{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
+ .form input, .form textarea, .form button {
+  width: 50%;
+ }
+}
+/*MENU MOBILE*/
+
+@media (max-width: 768px) {
+  
+  .menu{
+    display: none;
+  }
+  .menuMob {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-rodape);
+    list-style: none;
+  }
+
+  .botao__menu{
+    display: initial;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+
